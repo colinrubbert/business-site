@@ -1,0 +1,18 @@
+---
+---
+
+
+/* Transition, URL, and image paths from settings file to usable SASS variables
+$baseurl-path: '{{ site.baseurl }}'
+$animation: '{{ site.data.layout.animation }}'
+$logo-path: '{{ site.data.layout.logo }}'
+$hero-path: '{{ site.data.layout.hero }}'
+$avatar-path: '{{ site.data.layout.avatar }}'
+$projects: {% for project in site.data.settings.projects %} "{{ project.folder }}", {% endfor %}
+
+/* IMPORTS */
+
+@import '1-tools/-tools-index'
+@import '2-base/-base-index'
+@import '3-modules/-modules-index'
+@import '4-pages/-pages-index'
